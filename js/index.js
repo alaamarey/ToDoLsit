@@ -1,3 +1,4 @@
+const formElement = document.querySelector("form");
 const inputElement = document.querySelector("input");
 const loadingElement = document.querySelector(".loading");
 const apiKey = "6875159d34a1869ccb28d658";
@@ -10,8 +11,6 @@ if (localStorage.getItem("theme") !== null) {
   document.documentElement.dataset.theme = theme;
 
   if (theme === "light") mode.classList.replace("fa-sun", "fa-moon");
-  // else
-  //     mode.classList.replace('fa-moon' , 'fa-sun')
 }
 
 
@@ -28,9 +27,10 @@ mode.addEventListener("click", function () {
   }
 });
 
-document.querySelector("form").addEventListener("submit", function (e) {
+formElement.addEventListener("submit", function (e) {
   e.preventDefault();
   addTodo();
+form
 });
 
 async function addTodo() {
@@ -60,9 +60,9 @@ async function addTodo() {
     if (data.message === "success") {
       toastr.success("Your Task Added Successfull", "Tostar App ");
       await getAllTodos();
+      formElement.reset();
     } else {
       console.log(data);
-
       toastr.error(data.error[0].message, "Inconceivable!");
     }
   } catch (error) {
@@ -70,6 +70,9 @@ async function addTodo() {
   } finally {
     hideLoading();
   }
+
+
+
 }
 
 async function getAllTodos() {
