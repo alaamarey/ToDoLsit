@@ -1,0 +1,158 @@
+[data-theme="light"] {
+  --main-color: #9361f5;
+  --text-color: #dfb0b0;
+  --complete-color: #63e6be;
+  --progress-color : #9d6dfe ; 
+  --progress-bar-color :#641df1 ; 
+}
+
+[data-theme="dark"] {
+  --main-color: #1d1133;
+  --text-color: #ac7171;
+  --complete-color: #0d251f;
+   --progress-color : #b28cff ; 
+    --progress-bar-color: #311f55 ;
+}
+
+body {
+background-image: url('../img/body.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.theme {
+  position: fixed;
+  z-index: 99999;
+  bottom: 50px;
+  right: 50px;
+  padding: 10px;
+}
+
+.theme i {
+  font-size: 40px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#progress {
+  margin-top: 8px;
+  height: 15px;
+  width: 100%;
+  background-color: var(--progress-color) ;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress #progress-bar {
+  height: inherit;
+  background-color: var(--progress-bar-color) ; 
+  transition: width 0.5s ;
+}
+
+.status-progress {
+  width: 50px;
+  height: 50px;
+}
+
+.form-control {
+  width: 80%;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px 1px var(--main-color);
+}
+
+button {
+  padding: 5px 17px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  border-color: transparent;
+  color: var(--text-color);
+}
+
+ul .todo-title {
+  cursor: pointer;
+}
+
+div .trash-icon {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div .complete-icon {
+  color: var(--complete-color);
+}
+
+/* Loading */
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 22;
+  background-color: rgba(0 0 0 /0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #fff #fff transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent var(--main-color) var(--main-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #fff #fff transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
