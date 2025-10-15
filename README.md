@@ -29,7 +29,9 @@ A modern and interactive web application built using **HTML**, **CSS**, and **Ja
 
 The app sends an API request using fetch() .
 When the response arrives:
+
 ✅ A Toaster message appears for success or error.
+
 ⚠️ A SweetAlert popup may ask for confirmation or show detailed messages.
 
 
@@ -37,24 +39,15 @@ When the response arrives:
 
  **Clone this repository**
  ```bash
- 1. git clone https://github.com/YourUsername/YourProjectName.git
+ 1. git clone https://github.com/alaamarey/ToDoLsit.git
  2. Navigate to the project directory
+
      cd YourProjectName
  3.Install dependencies
+
      npm install 
  4.Run the application
+
    npm start
 
 
-
-
-
-
-
-
-
-
-
-
-   ```bash
-   git clone https://github.com/YourUsername/YourProjectName.git
