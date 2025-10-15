@@ -40,14 +40,14 @@ When the response arrives:
  **Clone this repository**
  ```bash
  1. git clone https://github.com/alaamarey/ToDoLsit.git
+
  2. Navigate to the project directory
-
      cd YourProjectName
+
  3.Install dependencies
+     npm install
 
-     npm install 
  4.Run the application
-
    npm start
 
 
