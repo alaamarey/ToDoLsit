@@ -26,9 +26,9 @@ A modern and interactive web application built using **HTML**, **CSS**, and **Ja
 
 --- 
 
-## 🚀 Live Deme
-![Website Preview](https://to-do-lsit.vercel.app/)
+## 🚀 Live Demo
 
+🔗 [View Website](https://to-do-lsit.vercel.app/)  
 
 
 
